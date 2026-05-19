@@ -1,0 +1,17 @@
+# View application errors
+fields @timestamp, @message
+| filter @message like /ERROR/
+| sort @timestamp desc
+| limit 20
+
+# View HTTP requests
+fields @timestamp, @message
+| filter @message like /GET/ or @message like /POST/
+| sort @timestamp desc
+| limit 50
+
+# View container startup logs
+fields @timestamp, @message
+| filter @message like /docker/
+| sort @timestamp desc
+| limit 20

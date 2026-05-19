@@ -25,3 +25,7 @@ output "frontend_bucket_name" {
 output "cloudfront_distribution_id" {
   value = module.storage.cloudfront_distribution_id
 }
+
+output "cloudwatch_log_group" {
+  value = module.monitoring.log_group_name
+}

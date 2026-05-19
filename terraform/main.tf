@@ -47,3 +47,7 @@ module "compute" {
 module "storage" {
   source = "./modules/storage"
 }
+
+module "monitoring" {
+  source = "./modules/monitoring"
+}

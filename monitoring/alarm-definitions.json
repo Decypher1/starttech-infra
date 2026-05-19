@@ -1,0 +1,24 @@
+{
+  "alarms": [
+    {
+      "AlarmName": "HighCPUUtilization",
+      "MetricName": "CPUUtilization",
+      "Namespace": "AWS/EC2",
+      "Statistic": "Average",
+      "Period": 300,
+      "EvaluationPeriods": 2,
+      "Threshold": 80,
+      "ComparisonOperator": "GreaterThanThreshold"
+    },
+    {
+      "AlarmName": "HighALBRequestCount",
+      "MetricName": "RequestCount",
+      "Namespace": "AWS/ApplicationELB",
+      "Statistic": "Sum",
+      "Period": 300,
+      "EvaluationPeriods": 1,
+      "Threshold": 1000,
+      "ComparisonOperator": "GreaterThanThreshold"
+    }
+  ]
+}
